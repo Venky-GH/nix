@@ -25,10 +25,16 @@
 
       homebrew = {
         enable = true;
+        brews = [
+          "mas"
+        ];
         casks = [
           "logi-options+"
           "visual-studio-code"
         ];
+        masApps = {
+          "Davinci Resolve" = 571213070;
+        };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
         onActivation.upgrade = true;
