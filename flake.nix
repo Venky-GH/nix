@@ -34,6 +34,8 @@
         ];
         masApps = {
           "Davinci Resolve" = 571213070;
+          "Keepa - Price Tracker" = 1533805339;
+          "Grammarly" = 1462114288;
         };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
