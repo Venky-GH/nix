@@ -1,22 +1,68 @@
 #!/bin/bash
 
+# Exit if any command fails
+set -e
+
+# Define colors
+GREEN="\e[32m"
+YELLOW="\e[33m"
+RED="\e[31m"
+RESET="\e[0m"
+
+# Logging functions
+log_info() { printf "${GREEN}[INFO] $1${RESET}"; }
+log_warning() { printf "${YELLOW}[WARNING] $1${RESET}"; }
+log_error() { printf "${RED}[ERROR] $1${RESET}"; }
+
 # Check if a commit message is provided
 if [ -z "$1" ]; then
-    echo "Usage: $0 \"commit message\""
+    log_error "Usage: $0 \"commit message\""
+    exit 1
+fi
+
+TARGET_DIR=~/Code/git-repositories/nix
+
+# Ensure the target directory exists
+if [ ! -d "$TARGET_DIR" ]; then
+    log_error "Target directory '$TARGET_DIR' does not exist."
+    exit 1
+fi
+
+# Ensure the target directory is a Git repository
+if [ ! -d "$TARGET_DIR/.git" ]; then
+    log_error "'$TARGET_DIR' is not a Git repository."
     exit 1
 fi
 
 # Copy files
-cp -rf ~/.config/nix/. .
+log_info "Copying Nix configuration files from '~/.config/nix' to '$TARGET_DIR'..."
+cp -rf ~/.config/nix/. "$TARGET_DIR"
+
+# List files affected
+log_info "Files affected:"
+git -C "$TARGET_DIR" status
 
 # Show changes
-git diff
+log_info "Refer to the following diff:"
+git -C "$TARGET_DIR" diff
+
+# Ask for user confirmation
+read -rp "Do you want to continue? (y/n): " choice
+if [[ "$choice" != "y" && "$choice" != "Y" ]]; then
+    log_warning "Operation aborted by user."
+    exit 1
+fi
 
 # Add all changes
-git add .
+log_info "Staging all changes..."
+git -C "$TARGET_DIR" add .
 
 # Commit with provided message
-git commit -m "$1"
+log_info "Committing changes..."
+git -C "$TARGET_DIR" commit -m "$1"
 
 # Push changes
-git push
+log_info "Pushing changes to the remote repository..."
+git -C "$TARGET_DIR" push
+
+log_info "Operation completed successfully!"
