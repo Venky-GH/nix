@@ -31,6 +31,7 @@
         casks = [
           "logi-options+"
           "visual-studio-code"
+          "whatsapp"
         ];
         masApps = {
           "Davinci Resolve" = 571213070;
