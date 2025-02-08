@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Usage
+# ~/Code/git-repositories/nix/commit-nix-changes.sh ""
+
 # Exit if any command fails
 set -e
 
