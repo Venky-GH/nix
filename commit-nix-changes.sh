@@ -19,6 +19,7 @@ log_error() { printf "${RED}[ERROR] $1${RESET}"; }
 
 # Check if a commit message is provided
 if [ -z "$1" ]; then
+    log_error "Please provide a commit message\n"
     log_error "Usage: $0 \"commit message\"\n"
     exit 1
 fi
