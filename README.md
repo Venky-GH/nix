@@ -48,10 +48,9 @@ darwin-rebuild switch
 ```
 update "system.defaults"
 ```
-
-## Check documentation
-#### https://mynixos.com
+#### https://daiderd.com/nix-darwin/manual/index.html
 
 ## Main References
-#### https://www.youtube.com/watch?v=Z8BL8mdzWHI
-#### https://davi.sh/til/nix/nix-macos-setup/
+#### Installing Nix and Nix Darwin: https://davi.sh/til/nix/nix-macos-setup/
+#### Configuring nix: https://www.youtube.com/watch?v=Z8BL8mdzWHI
+#### Others: https://mynixos.com

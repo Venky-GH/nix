@@ -32,6 +32,7 @@
           "logi-options+"
           "visual-studio-code"
           "whatsapp"
+          "obs"
         ];
         masApps = {
           "Davinci Resolve" = 571213070;
@@ -69,6 +70,16 @@
 
       system.defaults = {
         dock.autohide = true;
+        dock.persistent-apps = [
+          "/System/Applications/Launchpad.app"
+          "/System/Applications/FaceTime.app"
+          "/System/Applications/Music.app"
+          "/Applications/Safari.app"
+          "/System/Applications/Utilities/Terminal.app"
+          "/Applications/Visual Studio Code.app"
+          "/Applications/DaVinci Resolve.app"
+          "/Applications/OBS.app"
+        ];
       };
 
       # Auto upgrade nix package and the daemon service
