@@ -33,6 +33,7 @@
           "visual-studio-code"
           "whatsapp"
           "obs"
+          "obsidian"
         ];
         masApps = {
           "Davinci Resolve" = 571213070;
@@ -74,11 +75,12 @@
           "/System/Applications/Launchpad.app"
           "/System/Applications/FaceTime.app"
           "/System/Applications/Music.app"
-          "/Applications/Safari.app"
           "/System/Applications/Utilities/Terminal.app"
+          "/Applications/Safari.app"
           "/Applications/Visual Studio Code.app"
           "/Applications/DaVinci Resolve.app"
           "/Applications/OBS.app"
+          "/Applications/Obsidian.app"
         ];
       };
 
