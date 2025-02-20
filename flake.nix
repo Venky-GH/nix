@@ -34,6 +34,7 @@
           "whatsapp"
           "obs"
           "obsidian"
+          "google-chrome"
         ];
         masApps = {
           "Davinci Resolve" = 571213070;
@@ -76,7 +77,7 @@
           "/System/Applications/FaceTime.app"
           "/System/Applications/Music.app"
           "/System/Applications/Utilities/Terminal.app"
-          "/Applications/Safari.app"
+          "/Applications/Google Chrome.app"
           "/Applications/Visual Studio Code.app"
           "/Applications/DaVinci Resolve.app"
           "/Applications/OBS.app"
