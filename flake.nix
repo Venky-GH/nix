@@ -41,6 +41,7 @@
           "Keepa - Price Tracker" = 1533805339;
           "Grammarly" = 1462114288;
           "AdGaurd" = 1440147259;
+          "Microsoft OneNote" = 784801555;
         };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
