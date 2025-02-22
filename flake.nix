@@ -83,6 +83,7 @@
           "/Applications/DaVinci Resolve.app"
           "/Applications/OBS.app"
           "/Applications/Obsidian.app"
+          "/Applications/Microsoft OneNote.app"
         ];
       };
 
