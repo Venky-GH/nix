@@ -54,3 +54,14 @@ update "system.defaults"
 #### Installing Nix and Nix Darwin: https://davi.sh/til/nix/nix-macos-setup/
 #### Configuring nix: https://www.youtube.com/watch?v=Z8BL8mdzWHI
 #### Others: https://mynixos.com
+
+## Errors encountered
+
+Recently we encountered the following error:
+```
+error:
+Failed assertions:
+- The option definition 'services.nix-daemon.enable' in '<unknown-file>' no longer has any effect; please remove it.
+nix-darwin now manages nix-daemon unconditionally when
+'nix.enable' is on.
+```
