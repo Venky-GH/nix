@@ -55,13 +55,31 @@ update "system.defaults"
 #### Configuring nix: https://www.youtube.com/watch?v=Z8BL8mdzWHI
 #### Others: https://mynixos.com
 
-## Errors encountered
+## Errors encountered and their fixes
 
-Recently we encountered the following error:
+### Error 1
+```
+Error: invalid option: --no-lock
+```
+
+### Fix 1
+Run the following command (where flake.nix/flake.lock is present, i.e., ~/.config/nix). This updates flake.
+```
+nix flake update
+```
+
+### Error 2
 ```
 error:
 Failed assertions:
 - The option definition 'services.nix-daemon.enable' in '<unknown-file>' no longer has any effect; please remove it.
 nix-darwin now manages nix-daemon unconditionally when
 'nix.enable' is on.
+```
+
+### Fix 2
+Fix for this was to remove the following line from flake.nix
+
+```
+services.nix-daemon.enable = true;
 ```
