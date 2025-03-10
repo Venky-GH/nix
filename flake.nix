@@ -35,6 +35,8 @@
           "obs"
           "obsidian"
           "google-chrome"
+          "dropbox"
+          "clipbook"
         ];
         masApps = {
           "Davinci Resolve" = 571213070;
