@@ -82,6 +82,7 @@
           "/System/Applications/Utilities/Terminal.app"
           "/Applications/Google Chrome.app"
           "/Applications/Visual Studio Code.app"
+          "/Applications/Cursor.app"
           "/Applications/DaVinci Resolve.app"
           "/Applications/OBS.app"
           "/Applications/Obsidian.app"
