@@ -36,6 +36,7 @@
           "obsidian"
           "google-chrome"
           "dropbox"
+          "cursor"
         ];
         masApps = {
           "Davinci Resolve" = 571213070;
