@@ -78,7 +78,6 @@
       system.defaults = {
         dock.autohide = true;
         dock.persistent-apps = [
-          "/System/Applications/Launchpad.app"
           "/System/Applications/FaceTime.app"
           "/System/Applications/Music.app"
           "/System/Applications/Utilities/Terminal.app"
@@ -116,6 +115,8 @@
         configuration
         nix-homebrew.darwinModules.nix-homebrew
         {
+          system.primaryUser = "venkateshnaidu";
+
           nix-homebrew = {
             enable = true;
             # Apple Silicon Only
