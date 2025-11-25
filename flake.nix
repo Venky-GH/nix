@@ -23,6 +23,7 @@
           pkgs.pyenv
           pkgs.mkalias
           pkgs.nodejs
+          pkgs.dotnet-sdk_8
         ];
 
       homebrew = {
@@ -39,6 +40,7 @@
           "google-chrome"
           "dropbox"
           "cursor"
+          "adobe-acrobat-reader"
         ];
         masApps = {
           "Davinci Resolve" = 571213070;
@@ -59,7 +61,7 @@
         env = pkgs.buildEnv {
           name = "system-applications";
           paths = config.environment.systemPackages;
-          pathsToLink = "/Applications";
+          pathsToLink = [ "/Applications" ];
         };
       in
         pkgs.lib.mkForce ''
@@ -83,6 +85,7 @@
           "/System/Applications/Utilities/Terminal.app"
           "/Applications/Google Chrome.app"
           "/Applications/Cursor.app"
+          "/Applications/Visual Studio Code.app"
           "/Applications/DaVinci Resolve.app"
           "/Applications/OBS.app"
           "/Applications/Obsidian.app"
