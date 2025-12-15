@@ -41,6 +41,7 @@
           "dropbox"
           "cursor"
           "adobe-acrobat-reader"
+          "onlyoffice"
         ];
         masApps = {
           "Davinci Resolve" = 571213070;
