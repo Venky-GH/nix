@@ -42,6 +42,7 @@
           "cursor"
           "adobe-acrobat-reader"
           "onlyoffice"
+          "remote-desktop-manager"
         ];
         masApps = {
           "Davinci Resolve" = 571213070;
@@ -87,8 +88,6 @@
           "/Applications/Google Chrome.app"
           "/Applications/Cursor.app"
           "/Applications/Visual Studio Code.app"
-          "/Applications/DaVinci Resolve.app"
-          "/Applications/OBS.app"
           "/Applications/Obsidian.app"
           "/Applications/Microsoft OneNote.app"
         ];
