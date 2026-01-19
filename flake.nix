@@ -34,15 +34,16 @@
         casks = [
           "logi-options+"
           "visual-studio-code"
-          "whatsapp"
+          #"whatsapp"
           "obs"
           "obsidian"
           "google-chrome"
           "dropbox"
           "cursor"
-          "adobe-acrobat-reader"
+          #"adobe-acrobat-reader"
           "onlyoffice"
           "remote-desktop-manager"
+          "beeper"
         ];
         masApps = {
           "Davinci Resolve" = 571213070;
@@ -50,6 +51,7 @@
           "Grammarly" = 1462114288;
           "AdGaurd" = 1440147259;
           "Microsoft OneNote" = 784801555;
+          "Googly Eyes" = 6743048714;
         };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
