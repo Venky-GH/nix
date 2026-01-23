@@ -34,7 +34,7 @@
         casks = [
           "logi-options+"
           "visual-studio-code"
-          #"whatsapp"
+          "whatsapp"
           "obs"
           "obsidian"
           "google-chrome"
