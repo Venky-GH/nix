@@ -83,3 +83,10 @@ Fix for this was to remove the following line from flake.nix
 ```
 services.nix-daemon.enable = true;
 ```
+
+## Cleanup commands
+
+```
+sudo nix-collect-garbage -d
+brew cleanup
+```
