@@ -2,14 +2,17 @@
   description = "nix-darwin system flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    nix-darwin.url = "github:LnL7/nix-darwin/master";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nix-darwin.url = "github:LnL7/nix-darwin/nix-darwin-25.11";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
   let
+    # toggle this to install/uninstall problematic casks
+    enableProblematicCasks = false;
+
     configuration = { pkgs, config, ... }: {
 
       nixpkgs.config.allowUnfree = true;
@@ -31,7 +34,9 @@
         brews = [
           "mas"
         ];
-        casks = [
+        casks =
+        [
+          # stable casks
           "logi-options+"
           "visual-studio-code"
           "whatsapp"
@@ -40,10 +45,13 @@
           "google-chrome"
           "dropbox"
           "cursor"
-          #"adobe-acrobat-reader"
           "onlyoffice"
           "remote-desktop-manager"
           "beeper"
+        ]
+        ++ pkgs.lib.optionals enableProblematicCasks [
+          # flaky / problematic casks
+          "adobe-acrobat-reader"
         ];
         masApps = {
           "Davinci Resolve" = 571213070;
