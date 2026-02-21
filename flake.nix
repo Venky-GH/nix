@@ -48,6 +48,7 @@
           "onlyoffice"
           "remote-desktop-manager"
           "beeper"
+          "postman"
         ]
         ++ pkgs.lib.optionals enableProblematicCasks [
           # flaky / problematic casks
