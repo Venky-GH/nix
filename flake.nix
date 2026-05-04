@@ -55,12 +55,12 @@
           "adobe-acrobat-reader"
         ];
         masApps = {
-          "Davinci Resolve" = 571213070;
-          "Keepa - Price Tracker" = 1533805339;
-          "Grammarly" = 1462114288;
-          "AdGaurd" = 1440147259;
-          "Microsoft OneNote" = 784801555;
-          "Googly Eyes" = 6743048714;
+          # "Davinci Resolve" = 571213070;
+          # "Keepa - Price Tracker" = 1533805339;
+          # "Grammarly" = 1462114288;
+          # "AdGaurd" = 1440147259;
+          # "Microsoft OneNote" = 784801555;
+          # "Googly Eyes" = 6743048714;
         };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
@@ -97,6 +97,7 @@
           "/System/Applications/Music.app"
           "/System/Applications/Utilities/Terminal.app"
           "/Applications/Google Chrome.app"
+          "/Applications/Safari.app"
           "/Applications/Cursor.app"
           "/Applications/Visual Studio Code.app"
           "/Applications/Obsidian.app"
