@@ -49,6 +49,7 @@
           "remote-desktop-manager"
           "beeper"
           "postman"
+          "dockdoor"
         ]
         ++ pkgs.lib.optionals enableProblematicCasks [
           # flaky / problematic casks
@@ -97,7 +98,7 @@
           "/System/Applications/Music.app"
           "/System/Applications/Utilities/Terminal.app"
           "/Applications/Google Chrome.app"
-          "/Applications/Safari.app"
+          "/System/Cryptexes/App/System/Applications/Safari.app"
           "/Applications/Cursor.app"
           "/Applications/Visual Studio Code.app"
           "/Applications/Obsidian.app"
