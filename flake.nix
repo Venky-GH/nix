@@ -25,15 +25,20 @@
           pkgs.git
           pkgs.pyenv
           pkgs.mkalias
-          pkgs.nodejs
           pkgs.dotnet-sdk_8
+          pkgs.mas
+          pkgs.fnm
         ];
+
+      # Enable zsh and set up the fnm shell hook
+      programs.zsh.enable = true;
+      programs.zsh.interactiveShellInit = ''
+        eval "$(fnm env --use-on-cd)"
+      '';
 
       homebrew = {
         enable = true;
-        brews = [
-          "mas"
-        ];
+        brews = [];
         casks =
         [
           # stable casks
@@ -50,19 +55,21 @@
           "beeper"
           "postman"
           "dockdoor"
+          "appcleaner"
         ]
         ++ pkgs.lib.optionals enableProblematicCasks [
           # flaky / problematic casks
           "adobe-acrobat-reader"
         ];
-        masApps = {
-          # "Davinci Resolve" = 571213070;
-          # "Keepa - Price Tracker" = 1533805339;
-          # "Grammarly" = 1462114288;
-          # "AdGaurd" = 1440147259;
-          # "Microsoft OneNote" = 784801555;
-          # "Googly Eyes" = 6743048714;
-        };
+        # Uncomment this section once we have a stable nixpkgs
+        # masApps = {
+        #   "Davinci Resolve" = 571213070;
+        #   "Keepa - Price Tracker" = 1533805339;
+        #   "Grammarly" = 1462114288;
+        #   "AdGaurd" = 1440147259;
+        #   "Microsoft OneNote" = 784801555;
+        #   "Googly Eyes" = 6743048714;
+        # };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
         onActivation.upgrade = true;
@@ -102,7 +109,6 @@
           "/Applications/Cursor.app"
           "/Applications/Visual Studio Code.app"
           "/Applications/Obsidian.app"
-          "/Applications/Microsoft OneNote.app"
         ];
       };
 
