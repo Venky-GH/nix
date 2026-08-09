@@ -49,7 +49,6 @@
           "obsidian"
           "google-chrome"
           "dropbox"
-          "cursor"
           "onlyoffice"
           "remote-desktop-manager"
           "beeper"
@@ -106,7 +105,6 @@
           "/System/Applications/Utilities/Terminal.app"
           "/Applications/Google Chrome.app"
           "/System/Cryptexes/App/System/Applications/Safari.app"
-          "/Applications/Cursor.app"
           "/Applications/Visual Studio Code.app"
           "/Applications/Obsidian.app"
         ];
