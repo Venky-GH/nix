@@ -55,6 +55,7 @@
           "postman"
           "dockdoor"
           "appcleaner"
+          "transmission"
         ]
         ++ pkgs.lib.optionals enableProblematicCasks [
           # flaky / problematic casks
